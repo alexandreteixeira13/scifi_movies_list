@@ -15,16 +15,15 @@ class MainApp extends StatefulWidget {
   MainAPP createState() => MainAPP();
 
 }
-
+ 
 class MainAPP extends State<MainApp>{
-  //ignore: unused_field
 
   List<Movie>movies = List.empty();
   int total = 0;
 
   Future<void> readJson() async {
     final String response = await rootBundle.loadString('assets/movies.json');
-    Iterable data = await json.decode(response);
+      Iterable data = await json.decode(response);
     movies = List<Movie>.from(data.map((model) => Movie.fromJson(model)));
     total = movies.length;
     setState(() {
@@ -33,7 +32,24 @@ class MainAPP extends State<MainApp>{
     });
   }
 
-  
+  @override
+  Widget build(BuildContext context){
+    return MaterialApp(
+      home: Scaffold(
+        extendBody: true,
+        body: Center(
+          child: Padding(padding: const EdgeInsets.fromLTRB(25, 30, 25, 30),
+          child: Column(mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+
+            Text('$total')
+
+          ],),)
+        ),
+      ),
+    );
+  }
 }
 
 
