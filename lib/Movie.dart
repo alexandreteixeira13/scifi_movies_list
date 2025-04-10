@@ -1,39 +1,36 @@
 
-import 'package:scifi_movies_list/Diretor.dart';
-import 'package:scifi_movies_list/Genero.dart';
-
 class Movie {
 
-  late String name;
+  late String title;
   late String descricao;
   late String poster;
-  late Diretor director;
-  late Genero genre;
+  late String director;
+  late String genre;
   Movie(){
-    name = '';
+    title = '';
     descricao = '';
     poster = '';
-    director = '' as Diretor;
-    genre = '' as Genero;
+    director = '' ;
+    genre = '';
   } 
 
-  Movie.v(this.name, this.descricao, this.poster, this.director, this.genre);
+  Movie.v(this.title, this.descricao, this.poster, this.director, this.genre);
 
 
   Movie.fromJson(Map<String, dynamic> json)
-  : name = json['Name'] as String,
-  descricao = json['Description'] as String,
-  poster = json['Poster']  as String,
-  genre = json['Genre'] as Genero,
-  director = json['Director'] as Diretor;
+  : title = json['title'] as String,
+  descricao = json['description'] as String,
+  poster = json['poster']  as String,
+  genre = json['genre'] as String,
+  director = json['director'] as String;
 
   Map<String, dynamic> toJson() => {
 
-    'Name' : name,
-    'Description' : descricao,
-    'Poster' : poster,
-    'Genre' : genre,
-    'Director' : director,
+    'title' : title,
+    'description' : descricao,
+    'poster' : poster,
+    'genre' : genre,
+    'director' : director,
 
   };
 
