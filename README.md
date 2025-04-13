@@ -19,3 +19,7 @@
 
 <h2>Paginas Wiki:</h2>
 
+<p><a href = "https://github.com/alexandreteixeira13/scifi_movies_list/wiki/home">Home<a></p> 
+<p><a href = "https://github.com/alexandreteixeira13/scifi_movies_list/wiki/Classe">Classe<a></p> 
+<p><a href = "https://github.com/alexandreteixeira13/scifi_movies_list/wiki/Explica%C3%A7%C3%A3o-do-c%C3%B3digo">Descrição do código<a></p> 
+<p><a href = "https://github.com/alexandreteixeira13/scifi_movies_list/wiki/JSON">JSON<a></p> 
